@@ -11,10 +11,13 @@
     display: flex;
 }
 
-.dashboard-container .home-page {
+.dashboard-container > div > main {
     padding: 1rem;
     overflow: auto;
     width: 100%;
+}
+
+.dashboard-container .home-page {
     display: flex;
     flex-direction: column;
 }
@@ -26,4 +29,16 @@
 
 .dashboard-container .home-page .load-more {
     align-self: center;
+}
+
+.personal-movies > h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-size: bolder;
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: fit-content;
+    border-bottom: 5px solid var(--primary);
 }

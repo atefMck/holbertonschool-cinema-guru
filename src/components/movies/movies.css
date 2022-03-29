@@ -2,13 +2,13 @@
     width: 300px;
     min-height: 350px;
     background-color: var(--secondary-light);
-    margin: auto;
     margin-bottom: 50px;
     box-shadow: 12px 10px 13px -1px rgba(255, 255, 255, 0.05);
     -webkit-box-shadow: 12px 10px 13px -1px rgba(255, 255, 255, 0.05);
     -moz-box-shadow: 12px 10px 13px -1px rgba(255, 255, 255, 0.05);
     cursor: pointer;
     transition: 0.5s;
+    margin-left: 30px;
 }
 
 .movie-card:hover {
@@ -56,6 +56,24 @@
     stroke: none;
 }
 
+.movie-card div.movie-image .movie-actions .icon.favorite,
+.movie-card div.movie-image .movie-actions .icon.watch-later {
+    color: var(--main);
+    stroke: none;
+}
+
+.movie-card div.movie-image .movie-actions .icon.favorite path,
+.movie-card div.movie-image .movie-actions .icon.watch-later path {
+    transition: 0.5s;
+}
+
+.movie-card div.movie-image .movie-actions .icon.favorite:hover,
+.movie-card div.movie-image .movie-actions .icon.watch-later:hover {
+    stroke: var(--main);
+    stroke-width: 25;
+    color: transparent;
+}
+
 .movie-card h1 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -99,9 +117,13 @@
 
 .movies-filter .filter-section {
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.movies-filter .filter-section li:first-of-type {
+    width: 100%;
 }
 
 .movies-filter ul li {
@@ -133,4 +155,10 @@
 
 .movies-filter .filter-section-2 li.active-tag {
     background-color: var(--primary);
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

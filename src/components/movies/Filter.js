@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import SelectInput from '../general/SelectInput'
 import NumberInput from '../general/NumberInput'
+import SearchBar from '../general/SearchBar'
 import Tag from './Tag'
 
-const Filter = ({ minYear, setMinYear, maxYear, setMaxYear, sort, setSort, genres, setGenres }) => {
+const Filter = ({ minYear, setMinYear, maxYear, setMaxYear, sort, setSort, genres, setGenres, title, setTitle }) => {
     const sortOptions = [
         { value: "", label: "Default" },
         { value: "latest", label: "Latest" },
@@ -30,6 +31,7 @@ const Filter = ({ minYear, setMinYear, maxYear, setMaxYear, sort, setSort, genre
     return (
         <div className="movies-filter">
             <ul className="filter-section">
+                <li><SearchBar title={title} setTitle={setTitle} /></li>
                 <li><NumberInput label="Min Date" min={1970} max={2022} step={1} value={minYear} setValue={setMinYear} /></li>
                 <li><NumberInput label="Max Date" min={1970} max={2022} step={1} value={maxYear} setValue={setMaxYear} /></li>
                 <li>
